@@ -1,0 +1,57 @@
+#caseDetailsTab {
+	height: auto;
+	width: 100%;
+	padding-left: 4px;
+	padding-right: 5px;
+}
+
+#tdPaneDataContainer {
+	display: inline;
+}
+
+.clsRegTab, .clsRegTab span 
+{
+	font-size: 10pt;
+}
+
+table.clsTab 
+{
+	cursor: pointer;
+}
+
+.clsRegTab-center
+{
+	height: 16px;
+}
+
+.clsRegTab-center_over
+{
+	height: 16px;
+}
+
+.clsRegTab-center_pressed
+{
+	padding-bottom: 0px;
+}
+
+.clsRegTab-center_pressed_over
+{
+	padding-bottom: 0px;
+}
+
+.cddTab 
+{
+	/*display: ruby !important;*/
+	display: ruby !important;
+}
+
+.cddBOITab
+{
+	/*display: ruby-base-container !important;*/
+	display: ruby;
+}
+
+.vlaView
+{
+	border-bottom: none !important; /*1px solid #B7B7B7;*/
+}

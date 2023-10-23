@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="STRPlugin" version="1.0" includeDoctype="true">
+	<runtime>
+		<lib name="STRPlugin.jar"></lib>		
+		<extra-lib name="lib/rcm-acmplugin-6.1.0.12.jar" />
+		<extra-lib name="lib/slf4j-api-1.7.10.jar" />
+		<extra-lib name="lib/slf4j-log4j12-1.7.10.jar" />		
+		<extra-lib name="lib/fintrac-efile-rcmplugin.jar" />	
+		<extra-lib name="lib/form-common.jar" />	
+		<extra-lib name="lib/log4j-1.2.17.jar" />
+		<extra-lib name="lib/mssql-jdbc-7.4.1.jar" />
+		<extra-lib name="lib/rcm-sdk-commons-6.1.0.13.jar" />
+		<extra-lib name="lib/star-common.jar" />
+		<extra-lib name="lib/star-efile-plugin-generic.jar" />
+		<extra-lib name="properties"/>
+	</runtime>
+	<extension id="STRPluginExtension">
+            <dialog id="STRPluginDialog">
+                <page id="ApplicationPage" controller="com.ifs.plugin.actone.str.ApplicationController"/>
+            </dialog> 
+            <action id="createSTR" class="com.ifs.plugin.actone.str.ApplicationAction"/>
+     </extension>  
+</plugin>

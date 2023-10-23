@@ -1,0 +1,80 @@
+<link href='stylesheets3.0/TabTag.css' rel='stylesheet' type='text/css'>
+<script language=javascript src='javascripts3.0/packages/com/actimize/tabs/TabsManager.js'></script>
+<script language=javascript src='javascripts3.0/packages/com/actimize/tabs/TabManager.js'></script>
+<link href='stylesheetsRcm/panelTab.css' rel='stylesheet' type='text/css'>
+<link href='stylesheetsRcm/TabButtonTag.css' rel='stylesheet' type='text/css'>
+<script language=javascript src='javascriptsRcm/TextButtonTag.js'></script>
+<link rel='stylesheet' href='$acm.context.createLink("css/tabs.css")' TYPE='text/css'>
+<link rel='stylesheet' href='$acm.context.createLink("css/buttons.css")' TYPE='text/css'>
+<link rel='stylesheet' href='$acm.context.createLink("css/form.css")' TYPE='text/css'>
+<script language=javascript src='javascripts3.0/packages/com/actimize/tabs/TabManager.js'></script>
+<script>
+		resizeWindowAndCenter(550,350);
+		var formExists = $acm.getContext().getServletRequest().getAttribute('formExists');		
+	//	var temp =  $acm.getContext().getServletRequest().getAttribute('caseSTRCounts'));
+		#set ($actualData = $acm.getContext().getServletRequest().getAttribute('caseSTRCounts'))
+		#set ($formExist = $acm.getContext().getServletRequest().getAttribute('formExists'))
+                #set ($caseID = $acm.getContext().getServletRequest().getAttribute('caseId'))
+		#set ($message="")
+		#if ($formExist =='true') #set ($message = "The Case " + $caseID + " already has a STR. Do you still want to create new STRs ?") #end
+</script
+<div id="tabs">
+<input type="hidden" id="caseId" name="caseId" value="$acm.getContext().getServletRequest().getAttribute('caseId')"/>
+<input type="hidden" id="formExists" name="formExists" value="$acm.getContext().getServletRequest().getAttribute('formExists')"/>
+<table id="tblTabs1" cellpadding=0 cellspacing=0>
+			<tr>
+				<td class="tdValue">
+					<div class="inputLabel">Below is the summary of STRs for each location that will be created : <br> </div>
+				</td>
+			</tr>
+</div>
+<table id="tblTabs2" style="text-align: center;" cellspacing="0" cellpadding="0"> 
+<tr>
+<td class="tdValue"><b>BRANCH NUMBER</b></td>
+<td class="tdValue"><b>TRANSACTION COUNT</b></td>
+<td class="tdValue"><b>STR COUNT</b></td><br>
+</tr>
+$actualData
+</table>	
+<tr>
+<br><br><td class="tdValue"><b> $message</b></td>
+</tr>
+
+<div id="buttonTab" style="padding-top:15px;" align="right">
+		<table style="border:0px currentColor; border-image:none; cellpadding:0; cellspacing:0">
+			<tbody><tr>
+				<br>
+				<br>				
+			</tr>
+				<tr align="right">
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td width="50%" align="left">
+						<table title="" disabled="" class="cpButton " id="btnClose" onmouseover="mouseOverText(this)" onmouseout="mouseOutText(this)" onmousedown="mouseDownText(this)" onmouseup="mouseUpText(this)" onclick="performPluginControllerAction('createSTR')" onselectstart="return false;" cellspacing="0" cellpadding="0" stateful="false" data-gui-item="" ondbclickfunc="" ondbclick="">
+							<tbody>
+								<tr style="height: 19px;">
+									<td class="cpGrayButton-left"><img class="textButtonTagSpacer cpGrayButton-spacer" alt="" src="images/spacer.gif"></td>
+									<td class="cpGrayButton cpGrayButton-center" nowrap="">Generate STR</td>
+									<td class="cpGrayButton-right"><img class="textButtonTagSpacer cpGrayButton-spacer" alt="" src="images/spacer.gif"></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+
+
+
+
+<td width="50%" align="left">
+                                                <table title="" disabled="" class="cpButton " id="btnClose" onmouseover="mouseOverText(this)" onmouseout="mouseOutText(this)" onmousedown="mouseDownText(this)" onmouseup="mouseUpText(this)" onclick="function close(){window.close()};close();" onselectstart="return false;" cellspacing="0" cellpadding="0" stateful="false" data-gui-item="" onclickfunc="function close(){window.close()};close();" ondbclickfunc="" ondbclick="">
+                                                        <tbody>
+                                                                <tr style="height: 19px;">
+                                                                        <td class="cpGrayButton-left"><img class="textButtonTagSpacer cpGrayButton-spacer" alt="" src="images/spacer.gif"></td>
+                                                                        <td class="cpGrayButton cpGrayButton-center" nowrap="">Close</td>
+                                                                        <td class="cpGrayButton-right"><img class="textButtonTagSpacer cpGrayButton-spacer" alt="" src="images/spacer.gif"></td>
+                                                                </tr>
+                                                        </tbody>
+                                                </table>
+                                        </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
