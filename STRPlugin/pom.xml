@@ -15,7 +15,7 @@
 		<build.version>0.0.1</build.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<lib-ext.path>C:/Users/RoeiGivati/actimize_repository/externalRepo</lib-ext.path>
+		<!--lib-ext.path>C:/Users/RoeiGivati/actimize_repository/externalRepo</lib-ext.path -->
 	</properties>
 	<build>
 		<finalName>STRPlugin</finalName>
@@ -61,6 +61,8 @@
 		  <groupId>com.actimize.rcm</groupId>
 		  <artifactId>rcm-acmplugin</artifactId>
 		  <version>6.5.0.0</version>
+		  <scope>system</scope>
+		  <systemPath>${project.basedir}/lib/rcm-acmplugin-6.5.0.0.jar</systemPath> 
 		</dependency>
 		
 		<dependency>
@@ -91,7 +93,7 @@
 		  <artifactId>rcm</artifactId>
 		  <version>1.0</version> 
 		  <scope>system</scope>
-		  <systemPath>C:/Users/RoeiGivati/actimize_repository/RCM/rcm.jar</systemPath> 
+	  	  <systemPath>${project.basedir}/lib/rcm.jar</systemPath> 
 		</dependency>
 		
 		

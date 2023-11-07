@@ -1,0 +1,3 @@
+com\ifs\infra\ConnectionManager.class
+com\ifs\infra\AppConfigTest.class
+com\ifs\plugin\actone\str\ApplicationControllerTest.class
